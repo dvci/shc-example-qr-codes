@@ -18,7 +18,7 @@ Test patient details used throughout the QR codes:
     - Pfizer COVID-19 Vaccine on 08/22/2021
 
 ## Modifications to the SHC Web Verifier App
-To generate a QR code that is recognized by the verifier, the [shc-web-verifier app](https://github.com/dvci/shc-web-verifier) was edited and run locally. The `defaultIssuerDirectory` in the [src/utils/IssuerDirectories.js](https://github.com/dvci/shc-web-verifier/blob/main/src/utils/IssuerDirectories.js) file was redirected from the main vci-issuers directory to a new repository with a vci-issuers directory that includes the Sample Issuer as a verified issuer:
+To generate a QR code that is recognized by the verifier, the [shc-web-verifier app](https://github.com/dvci/shc-web-verifier) was edited and run locally. The `defaultIssuerDirectories` in the [src/utils/IssuerDirectories.js](https://github.com/dvci/shc-web-verifier/blob/main/src/utils/IssuerDirectories.js) file was redirected from the main vci-issuers directory to a new repository with a vci-issuers directory that includes the Sample Issuer as a verified issuer:
 ```
 const defaultIssuerDirectories = [
     {
@@ -114,7 +114,7 @@ const defaultIssuerDirectories = [
 
 #### Issuer not recognized
 - Cause of error: the issuer is missing or cannot be found in the issuer directory
-- Change made to working QR code: no change - run the working, verified QR code on the top of this pate outside of the local app, without the change to the `defaultIssuerDirectory`
+- Change made to working QR code: no change - run the working, verified QR code on the top of this pate outside of the local app, without the change to the `defaultIssuerDirectories`
 - ![Issuer not recognized](immunization-images/issuer-not-recognized.png)
 - <details><summary>Numeric SHC</summary> shc:/5676290952432060346029243740446031222959532654603460292540772804336028702864716745222809286437255265200745635807533945525326373052254142563945774003597340427526404212623141410341392964530503753965557741232060573601044529355311287423324250600657715706427012325905054203385329562936035833774536644145294232333973356854745842217008504364127257651200777236415831295539347153523244127060610577236130723738415527652965307569596339387337756237065222202071416723644010726203635608246237363200590628355371366163000365734072697240283800282965532733561268333167690775666462092939005224416920325821727040236521083175535738210606713009257244336157413222436440372264290069567739634038391052215276646776083221622923454037453809303711334528205804450659643445243521555620272526617674692126380564226463402927052453036835753408661054744328586676712138450944110335395245262776383932116135337554273622034061277720327444110503587053046127430539262973755433293021656520722561106652265207696639526142537277236773610042652371437628713365245761647525414332007603291131243970683820443962240321085562456121333767405773690854586138652755645034377731623777623261383222652229310634006575007725722170061152343273002331761120661050080323352574013262122705072130122061626660560440344343356959533012626671705864277459384342586955304034084361335662572422456436277043626575730539667705201233406436632731573433633452751120
 </details>
